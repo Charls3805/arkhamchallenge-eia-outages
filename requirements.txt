@@ -1,0 +1,8 @@
+# Libraries for the FastAPI application and Streamlit dashboard
+fastapi
+uvicorn[standard]
+requests
+pandas
+pyarrow
+streamlit
+python-dotenv

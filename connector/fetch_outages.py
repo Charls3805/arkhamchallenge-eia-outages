@@ -52,7 +52,7 @@ def fetch_page(base_url: str, api_key: str, offset: int, length: int) -> Dict[st
                 raise RuntimeError("Invalid API key or unauthorized (401/403).")
             r.raise_for_status()
             return r.json()
-        except requests.RequestsException as e:
+        except requests.RequestException as e:
             logging.warning(f"Network/API error attempt={attempt+1}: {e}")
             if attempt == 0:
                 time.sleep(1.5)

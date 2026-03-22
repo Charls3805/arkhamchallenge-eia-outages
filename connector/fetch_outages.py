@@ -1,6 +1,5 @@
 import os, time, logging # For debug and environment variable management
 from typing import Any, Dict, List # For type hinting
-from fastapi import params
 import requests # For making API requests
 import pandas as pd # For data manipulation and analysis
 from dotenv import load_dotenv # For loading environment variables from a .env file

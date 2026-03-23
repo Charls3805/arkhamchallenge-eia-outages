@@ -1,5 +1,4 @@
-import os # For file system operations like creating directories
-from datetime import date # For handling date objects and formatting dates
+import os # For file system operations
 from typing import Optional # For type hinting optional parameters
 
 import pandas as pd # For data manipulation and analysis
@@ -74,7 +73,7 @@ def get_data(
         df = df[df["period"] <= ed]
 
     # Additional filtering based on the 'facility' and 'generator' parameters, if they are specified
-    if facility is not None and "facility" in df.colums:
+    if facility is not None and "facility" in df.columns:
         df = df[df["facility"] == facility]
     if generator is not None and "generator" in df.columns:
         df = df[df["generator"] == generator]
